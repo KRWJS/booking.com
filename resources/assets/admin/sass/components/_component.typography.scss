@@ -1,0 +1,14 @@
+//---------------------------------------------------------
+// #Typography
+//---------------------------------------------------------
+
+.subtitle {
+  margin-bottom: $line-height-computed;
+  font-size: floor(($font-size-base * 1.1));
+  font-weight: 300;
+  line-height: 1.4;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: ($font-size-base * 1.2);
+  }
+}

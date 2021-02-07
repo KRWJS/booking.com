@@ -1,0 +1,207 @@
+//
+// Page - Job Description
+// --------------------------------------------------
+
+
+.container-intro--cta{
+  position: relative;
+}
+.container-intro-col--cta{
+  @include transition(padding 0.5s);
+  position: absolute;
+  top: -100%;
+  background: $white-base;
+  padding: 50px 30px;
+  @media only screen and (max-width : 415px) {
+    margin: 0 15px;
+    width: 93%;
+  }
+  & p{
+    margin-bottom: 40px;
+  }
+  & h1{
+    margin-bottom: 26px;
+  }
+}
+.container-job-description{
+  margin-top: 75px;
+  @media only screen and (max-width : 991px) {
+    margin-bottom: 0;
+  }
+  @media only screen and (max-width : 768px) {
+    margin-top: 125px;
+  }
+}
+.job-description-intro{
+  margin-bottom: 68px;
+  @media only screen and (max-width : 991px) {
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+}
+.job-description-image{
+  margin-bottom: 50px;
+}
+.ul-default__job-description--upper{
+  margin-top: 38px;
+  margin-bottom: 75px;
+}
+.ul-default__job-description--lower{
+  margin-bottom:38px;
+}
+.job-description-persona{
+  margin-bottom: 48px;
+  & p{
+    font-size: 17px;
+  }
+}
+.container-job-description--vacancy{
+  margin-top: 55px;
+  @media only screen and (max-width : 768px) {
+    margin-top: 30px;
+  }
+  & .btn-booking-default--blue{
+    margin-top: 40px;
+    margin-bottom: 70px;
+  }
+  & .btn-booking-lg--white{
+    margin-bottom: 6px;
+  }
+}
+.read-more,
+.read-less{
+  color: $grey-dark;
+  &:after{
+    @include booking-icons();
+    color: $grey-dark;
+    font-size: 16px;
+  }
+  &:hover,
+  &:focus,
+  &:active{
+    color: $grey-darker;
+  }
+}
+.read-more{
+  &:after{
+    margin-left: 7px;
+    content: "\f078";
+  }
+}
+.read-less{
+  &:after{
+    margin-left: 7px;
+    content: "\f077";
+  }
+}
+.list-inline--read-more{
+  & hr{
+    border-top: 1px solid $grey-dark;
+    width: 100px;
+  }
+}
+.list-inline__social-media--job-description{
+  height: 50px;
+  position: relative;
+  display: block;
+  margin: 0;
+  @media only screen and (max-width : 991px) {
+    margin: 0 0 50px 0;
+  }
+  & li{
+    margin-right: 10px;
+    & a{
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+              transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px transparent;
+      -webkit-transition-duration: 0.3s;
+              transition-duration: 0.3s;
+      -webkit-transition-property: transform;
+              transition-property: transform;
+      -webkit-transition-timing-function: ease-out;
+              transition-timing-function: ease-out;
+      &:hover,
+      &:focus,
+      &:active{
+        -webkit-transform: translateY(-8px);
+                transform: translateY(-8px);
+      }
+    }
+  }
+  & li:last-child{
+    margin-right: 0;
+  }
+}
+.job-description{
+  & ul{
+    font-size: 16px;
+    color: $grey-dark;
+    line-height: 160%;
+    margin: 1em 0;
+  }
+  & li{
+    margin-left: 30px;
+    padding: .3em 0;
+    position: relative;
+  }
+  & li:before{
+    content: "\2022 ";
+    position: absolute;
+    top: .65em;
+    left: -30px;
+    color: #feba02;
+    font-size: 26px;
+    line-height: 0;
+  }
+  & p{
+    margin: 1em 0;
+  }
+}
+.job-description-social{
+  margin: 70px 0;
+  @media only screen and (max-width : 991px) {
+    margin-bottom: 30px;
+  }
+}
+.js-is-fixed{
+  position: fixed;
+  z-index: 999;
+  top: 62px;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  width: 100%;
+  padding: 15px 25px;
+  margin-left: 0;
+  border-bottom: 5px solid $orange-base;
+  h1,
+  p{
+    text-align: left;
+    margin-bottom: 10px;
+    line-height: 1.333em;
+  }
+  h1{
+    font-size: 22px;
+  }
+  p{
+    font-size: 14px;
+  }
+  .vacancy-fixed-wrapper{
+    max-width: 975px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    padding: 0 15px;
+  }
+  .btn-booking-default--blue{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @media only screen and (max-width : 991px) {
+    display: none;
+  }
+}

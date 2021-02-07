@@ -1,0 +1,13 @@
+//---------------------------------------------------------
+//  #States
+//---------------------------------------------------------
+
+// Handle element states (hidden, active, ...)
+
+.l-is-visually-hidden {
+  display: inline-block;
+  height: 0px;
+  width: 0px;
+  overflow: hidden;
+  opacity: 0;
+}

@@ -1,0 +1,44 @@
+//
+// Layout - Footer
+// --------------------------------------------------
+
+
+.default-upper-footer{
+  background: $blue-base;
+  padding: 65px 15px;
+  & h4{
+    color: $white-base;
+    font-weight: bold;
+  }
+}
+.default-lower-footer{
+  background: $blue-dark;
+  padding: 0.63em;
+  & p,
+  & a{
+    color: $white-base;
+    font-size: 13px;
+  }
+  & li:nth-child(1),
+  & li:nth-child(2),
+  & li:nth-child(3){
+    margin-right: 1em;
+  }
+}
+.list-inline__social-media--footer{
+  @include transition (0.5s);
+  & a{
+    @include border-radius(50%);
+    color: $white-base;
+    background: $blue-social;
+    padding: 1.1em;
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+  }
+  & a:hover{
+    background: $white-base;
+    color: $blue-base;
+  }
+}

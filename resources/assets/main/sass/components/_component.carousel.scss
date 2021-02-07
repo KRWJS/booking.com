@@ -1,0 +1,175 @@
+//
+// Componenent - Carousel
+// --------------------------------------------------
+
+
+.slick-slide{
+  position: relative;
+}
+.u-vcenter--carousel{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  @media only screen and (max-width : 991px) {
+    position: relative;
+    transform: none;
+  }
+}
+.slick-arrow{
+  @include border-radius(50%);
+  color: $orange-base;
+  background: none;
+  border: 2px solid $orange-base;
+  color: $white-base;
+  height: 50px;
+  width: 50px;
+  @media only screen and (max-width : 480px) {
+    height: 30px;
+    width: 30px;
+  }
+
+}
+.slick-next,
+.slick-prev{
+  @include transition(background 0.5s);
+  position: absolute;
+  z-index: 2;
+  top: 37%;
+  &:before{
+    @include booking-icons();
+    color: $orange-base;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &:hover{
+    background: $orange-base;
+  }
+  &:hover:before{
+    color: $grey-base;
+  }
+}
+.slick-prev{
+  left: -10%;
+  &:before{
+    content: "\f053";
+  }
+  @media only screen and (max-width : 480px) {
+    left: -8%;
+  }
+}
+.slick-next{
+  right: -10%;
+  &:before{
+    content: "\f054";
+  }
+  @media only screen and (max-width : 480px) {
+    right: -8%;
+  }
+}
+.slick-slide > .btn-booking-lg--white{
+  width: 99%;
+  white-space: normal;
+  @media only screen and (max-width : 480px) {
+    width: 100%;
+  }
+}
+ul.slick-dots{
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  @media only screen and (max-width : 991px) {
+    transform: translate(-45%, 220%);
+  }
+  @media only screen and (max-width : 768px) {
+    transform: translate(-50%, 0%);
+  }
+  @media only screen and (max-width : 415px) {
+    transform: translate(-45%, 50%);
+  }
+}
+.slick-dots li{
+  float: left;
+  & button{
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    text-indent: -9999px;
+    background: #bec8d2;
+    border: 0;
+    margin-right: 19px;
+    padding: 0;
+  }
+}
+.slick-dots li.slick-active{
+  & button{
+    background: $blue-light;
+  }
+}
+
+
+//Vacancy Carousel
+.slick-slider--vacancy{
+  margin-bottom: 25px;
+  & img{
+    width: auto !important;
+  }
+}
+.u-light-blue-bg.carousel--vacancy{
+  padding: 62px 15px;
+  & h2{
+    text-align: center;
+  }
+  @media only screen and (max-width : 768px) {
+    padding: 36px 15px;
+  }
+}
+
+
+//Our Story Carousel
+.slick-slider--story{
+  margin-bottom: 75px;
+  margin-top: 25px;
+  & h2{
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 23px;
+  }
+  & p{
+    line-height: normal;
+    font-size: 16px;
+    line-height: 160%;
+  }
+  @media only screen and (max-width : 991px) {
+    & .slick-prev{
+      left: 0;
+    }
+    & .slick-next{
+      right: 0;
+    }
+  }
+  @media only screen and (max-width : 768px) {
+    margin-bottom: 0;
+    margin-top: 0;
+    & .slick-prev,
+    & .slick-next{
+      top: 110%;
+    }
+  }
+}
+.slick-slide img{
+  width: 80%;
+  @media only screen and (max-width : 991px) {
+    margin: 0 auto;
+    width: 60%;
+  }
+  @media only screen and (max-width : 415px) {
+    width: 100%;
+  }
+}
+.slick-slider--story > .slick-list{
+  margin-bottom: 60px;
+}

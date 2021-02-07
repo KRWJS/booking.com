@@ -1,0 +1,127 @@
+//
+// Page - Apply
+// --------------------------------------------------
+
+
+.row-intro-apply{
+  margin-bottom: 75px;
+  & h1{
+    margin: 50px 0 25px;
+    font-weight: 400;
+  }
+}
+.col-apply{
+  & p{
+    margin-bottom: 15px;
+  }
+  & h3{
+    color: $blue-base;
+  }
+}
+.col-apply--stepOne,
+.col-apply--stepTwo{
+  padding-bottom: 15px;
+  padding-left: 0;
+}
+.col-apply--stepOne{
+  & h3{
+    color: $orange-base;
+  }
+  border-bottom: 2px solid $orange-base;
+  margin-right: 20px;
+  @media only screen and (max-width : 991px) {
+    margin-right: 0;
+  }
+}
+.col-apply--stepTwo{
+  border-bottom: 2px solid $grey-dark;
+  & h3{
+    color: $grey-dark;
+  }
+  @media only screen and (max-width : 991px) {
+    margin-right: 0 !important;
+  }
+}
+.row-apply-steps{
+  margin-bottom: 50px;
+}
+.row-apply-linkedin{
+  margin-bottom: 47px;
+}
+.col-md-offset-1--input{
+  margin-right: 20px;
+  @media only screen and (max-width : 768px) {
+    margin-right: 0;
+  }
+}
+.checkbox{
+  margin-bottom: 40px;
+}
+.checkbox--inline{
+  display: inline-block;
+  margin-bottom: 35px;
+  & label{
+    float: left;
+    width: 33%;
+    margin: 10px 0;
+  }
+}
+#terms[type="checkbox"],
+.answers[type="checkbox"] {
+    display: none;
+}
+.animated-check {
+  position: relative;
+  padding-left: 50px !important;
+  padding-top: 9px !important;
+  font-size: 17px;
+  cursor: pointer;
+  color: #607389;
+  padding: 16px 28px 0 0;
+  @media only screen and (max-width : 768px) {
+    padding-top: 0 !important;
+  }
+  &:before,
+  &:after{
+    @include booking-icons();
+    font-size: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 10px;
+  }
+}
+.has-error .animated-check{
+  color: #637389 !important;
+}
+.has-error .animated-check:before{
+  box-shadow: none;
+  border: 2px solid $red-base;
+  &:focus{
+    box-shadow: none !important;
+    border-color: $orange-base;
+  }
+}
+.animated-check:before {
+  content: ''; //Unchecked
+  background: $white-base;
+  height: 30px;
+  width: 30px;
+}
+.animated-check:after {
+  @include transition (0.5s);
+  content: '\f00c'; //Checked
+  max-width: 0;
+  overflow: hidden;
+  font-weight: lighter;
+  opacity: 1;
+  font-size: 20px;
+  top: 5px;
+  left: 5px;
+  color: $blue-span;
+}
+input[type="checkbox"]:checked + label:after {
+  max-width: 25px;
+  opacity: 1;
+  margin-right: 90px;
+}

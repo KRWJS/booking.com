@@ -1,0 +1,11 @@
+//
+// Componenent - Vacancy Filter
+// --------------------------------------------------
+
+
+.row-filter{
+  @include border-radius(3px);
+  background: rgba(254,186,2,0.93);
+  padding: 20px 15px;
+  margin: 0 0 35px;
+}

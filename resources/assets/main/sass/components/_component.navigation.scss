@@ -1,0 +1,185 @@
+//
+// Componenent - Navigation
+// --------------------------------------------------
+
+
+.navbar-booking{
+  .nav,
+  .collapse,
+  .dropup,
+  .dropdown{
+    position: static;
+  }
+  .dropdown-menu{
+    @include box-shadow(0px, 0px, 5px, rgba(112,130,149,0.5), $inset: false);
+    left: -11%;
+    position: absolute;
+    border: 1px solid #e3e7e9;
+    margin-top: 1px !important;
+    & a{
+      padding: 0;
+    }
+    & a:hover{
+      background: transparent;
+      color: #666666;
+    }
+  }
+  .navbar-booking--content{
+    padding: 40px 15px 15px;
+  }
+  .navbar-booking--dropdown-list{
+    & a{
+      margin-top: 0;
+      margin-bottom: 25px;
+    }
+    & a:hover,
+    & a:focus,
+    & a:active{
+      background: transparent;
+      color: #666666 !important;
+    }
+    & .arrow-link:hover:before,
+      .arrow-link:focus:before,
+      .arrow-link:active:before{
+        color: #666666 !important;
+    }
+  }
+  .dropdown.navbar-booking-fw .dropdown-menu{
+    left: 0;
+    right: 0;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+  }
+}
+.navbar-booking--fixed.scrolled{
+  background: $blue-base;
+  & a{
+    color: $grey-dark;
+  }
+}
+.navbar-booking{
+  transition: top .3s ease-in-out;
+  transition: background .3s ease-in-out;
+  & li:last-child{
+    padding-right: 0;
+    & a:focus{
+      background-color: transparent;
+    }
+  }
+  & li > a{
+    color: $white-base;
+    font-size: 14px;
+    padding: 21px 25px;
+    @media only screen and (max-width : 991px) {
+      padding: 20px 15px;
+      font-size: 14px;
+    }
+  }
+  & li > a:hover,
+  & li > a:focus{
+    background-color: #17498e;
+    color: $white-base;
+  }
+  &:hover{
+    background: $blue-base;
+  }
+}
+.nav .open>a,
+.nav .open>a:hover,
+.nav .open>a:focus{
+  background-color: #17498e;
+}
+.dropdown--lang{
+  &:hover ul.dropdown-menu--lang{
+    display: block;
+  }
+  & a > img{
+    margin-top: 4px;
+  }
+  & .disabled{
+    padding: 18px 31px;
+  }
+}
+ul.dropdown-menu--lang{
+  @include box-shadow(0px, 0px, 0px, transparent !important);
+  border: 0;
+  min-width: 100px;
+  &:before{
+    @include booking-icons;
+    content: "\f0d8";
+    color: $white-base;
+    position: absolute;
+    top: -16px;
+    right: 50%;
+    transform: translate(50%);
+    font-size: 25px;
+  }
+  & li{
+    padding: 10px;
+    &.active{
+      background: #f2f6fa;
+      & a{
+        font-weight: bold;
+        color: $blue-dark;
+      }
+    }
+  }
+  & li > a{
+    color: $blue-base !important;
+    font-size: 14px;
+    background-color: transparent !important;
+    & img{
+      margin-right: 5px;
+      width: 20px;
+      height: 15px;
+    }
+    &:hover{
+      color: $blue-base !important;
+    }
+  }
+}
+.dropdown--lang--mobile{
+  position: absolute;
+  right: 18%;
+  top: 57%;
+  transform: translate(0%,-50%);
+}
+.dropdown-menu--mobile{
+  right: 9%;
+  top: 90%;
+  transform: translate(12.5%,0%);
+  left: auto;
+}
+
+
+//
+// Secondary Navigation
+// --------------------------------------------------
+
+
+.navbar-booking__secondary{
+  background: $blue-base;
+}
+.navbar-booking__secondary--white{
+  @include box-shadow(0px, 0px, 5px, rgba(112,130,149,0.5), $inset: false);
+  top: 60px;
+  background: $white-base;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  & a{
+    font-size: 15px;
+    padding: 5px 28px;
+    border-left: 1px solid #e6e9ed;
+  }
+  & .border-right{
+    border-right: 1px solid #e6e9ed;
+  }
+  & a.active{
+    color: $grey-darker;
+    border-bottom: 3px solid $orange-base;
+  }
+}
+.l-index{
+  z-index: 1;
+}

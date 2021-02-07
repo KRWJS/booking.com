@@ -1,0 +1,60 @@
+//---------------------------------------------------------
+// #Panel
+//---------------------------------------------------------
+
+.panel-grey {
+  border-color: #ddd;
+  background-color: #f5f5f5;
+
+  .panel-heading {
+    background-color: #eee;
+  }
+}
+
+.panel-heading--big {
+  padding: 15px 20px !important;
+
+  .panel-title {
+    font-size: 20px;
+  }
+}
+
+.panel-info {
+  &.panel-filled {
+    background-color: lighten($panel-info-heading-bg, 5%);
+  }
+}
+
+.panel-warning {
+  &.panel-filled {
+    background-color: lighten($panel-warning-heading-bg, 5%);
+  }
+}
+
+.panel-success {
+  &.panel-filled {
+    background-color: lighten($panel-success-heading-bg, 5%);
+  }
+}
+
+.panel-primary {
+  &.panel-filled {
+    background-color: lighten($panel-primary-heading-bg, 5%);
+  }
+}
+
+.panel-danger {
+  &.panel-filled {
+    background-color: lighten($panel-danger-heading-bg, 5%);
+  }
+}
+
+.tools {
+  font-size: 18px;
+  line-height: 10px;
+}
+
+.collapsable-panel-link {
+  width: 100%;
+  display: block;
+}

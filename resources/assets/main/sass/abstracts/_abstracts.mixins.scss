@@ -1,0 +1,227 @@
+//
+// Abstracts - Mixins
+// --------------------------------------------------
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+@mixin appearance($appearance) {
+	-webkit-appearance: $appearance;
+	   -moz-appearance: $appearance;
+	        appearance: $appearance;
+}
+
+
+@mixin image-retina($filename, $extension, $background-top:"center", $background-left:"center") {
+  background-image: url($filename + '.' + $extension);
+  background-repeat: no-repeat;
+  background-position: unquote($background-top) unquote($background-left);
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) {
+
+    & {
+      background-image: url($filename + '@2x.' + $extension);
+      -webkit-background-size: cover;
+         -moz-background-size: cover;
+           -o-background-size: cover;
+              background-size: cover;
+    }
+  }
+}
+
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+       -moz-box-shadow:inset $top $left $blur $color;
+            box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+       -moz-box-shadow: $top $left $blur $color;
+            box-shadow: $top $left $blur $color;
+  }
+}
+
+
+@mixin u-vcenter(){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+
+@mixin alpha-background-color($color, $background) {
+  $percent: alpha($color) * 100%;
+  $opaque: opacify($color, 1);
+  $solid-color: mix($opaque, $background, $percent);
+  background-color: $solid-color;
+  background-color: $color;
+}
+
+
+@mixin transition-duration($duration) {
+  -webkit-transition: $duration;
+     -moz-transition: $duration;
+      -ms-transition: $duration;
+       -o-transition: $duration;
+          transition: $duration;
+}
+
+
+@mixin transition-delay($delay) {
+  -webkit-transition: $delay;
+     -moz-transition: $delay;
+      -ms-transition: $delay;
+       -o-transition: $delay;
+          transition: $delay;
+}
+
+
+@mixin booking-icons(){
+  font-family: 'Booking-Icons';
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+}
+
+
+@mixin font-smoothing($value: antialiased) {
+
+  @if $value == antialiased {
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+  }
+
+  @else {
+
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+
+  }
+
+}
+
+
+@mixin arrow-link(){
+  margin-top: 23px;
+  font-size: 16px;
+  color: $blue-light !important;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  padding-right: 2.2em !important;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+
+  @media only screen and (max-width : 320px) {
+    padding-right: 1.4em !important;
+  }
+
+}
+
+
+@mixin arrow-link-before(){
+  @include booking-icons();
+  content: "\f054";
+  color: $blue-light;
+  position: absolute;
+  font-size: 12px;
+  right: 15%;
+  top: 16%;
+  padding: 0 1px;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+
+  @media only screen and (max-width : 768px) {
+    top: 17%;
+  }
+
+  @media only screen and (max-width : 320px) {
+    right: 10%;
+  }
+
+}
+
+
+@mixin translateY-rotate($translateY, $rotate){
+  -webkit-transform: translateY($translateY) rotate($rotate);
+     -moz-transform: translateY($translateY) rotate($rotate);
+      -ms-transform: translateY($translateY) rotate($rotate);
+       -o-transform: translateY($translateY) rotate($rotate);
+          transform: translateY($translateY) rotate($rotate);
+}
+
+
+@mixin translateX-translateY($translateX, $translateY){
+  -webkit-transform: translateX($translateY) translateY($translateY);
+     -moz-transform: translateX($translateY) translateY($translateY);
+      -ms-transform: translateX($translateY) translateY($translateY);
+       -o-transform: translateX($translateY) translateY($translateY);
+          transform: translateX($translateY) translateY($translateY);
+}
+
+
+@mixin translateZ($translateZ){
+  -webkit-transform: translateZ($translateZ);
+     -moz-transform: translateZ($translateZ);
+      -ms-transform: translateZ($translateZ);
+       -o-transform: translateZ($translateZ);
+          transform: translateZ($translateZ);
+}
+
+
+@mixin scale($scale){
+  -webkit-transform: scale($scale);
+     -moz-transform: scale($scale);
+      -ms-transform: scale($scale);
+       -o-transform: scale($scale);
+          transform: scale($scale);
+}
+
+
+@mixin transform-origin($originX, $originY) {
+  will-change: transform;
+  -webkit-transform-origin: $originX, $originY;
+     -moz-transform-origin: $originX, $originY;
+      -ms-transform-origin: $originX, $originY;
+       -o-transform-origin: $originX, $originY;
+          transform-origin: $originX, $originY;
+                 transform: $originX, $originY;
+}
+
+
+@mixin backface($backface){
+  -webkit-backface-visibility: $backface;
+          backface-visibility: $backface;
+}
+
+
+ 

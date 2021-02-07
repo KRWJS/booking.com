@@ -1,0 +1,150 @@
+//---------------------------------------------------------
+// #Form
+//---------------------------------------------------------
+
+// Index
+// - Form Base
+// - CMS form features
+
+//---------------------------------------------------------
+// #Form Base
+//---------------------------------------------------------
+
+.form-actions {
+  padding: 30px 0;
+}
+
+.form-group {
+  position: relative;
+}
+
+.has-error label {
+  color: #a94442;
+}
+
+.has-error .help-block {
+  color: inherit;
+}
+
+.error-block {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #a94442;
+}
+
+//---------------------------------------------------------
+// #CMS form features
+//---------------------------------------------------------
+
+// characeter and keyword counters
+.char-count-wrap, .keyword-count-wrap {
+  position: absolute;
+  right: 0;
+  color: #999;
+}
+
+// SEO preview
+.google-preview {
+  border-radius: 0.2em;
+  background: #fff;
+  border: 1px solid #e9e5e5;
+  padding: 20px;
+  margin-bottom: 1.5em;
+  display: block;
+  max-width: 500px;
+
+  p {
+    margin: 0;
+    padding: 0;
+    font-family: arial, sans-serif;
+  }
+
+  .gp-title {
+    color: #12c;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .gp-url {
+    color: #093;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+  }
+
+  .gp-desc {
+    color: #444;
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+
+// image upload
+.fileinput {
+  display: block;
+
+  .thumbnail--m, .thumbnail--s {
+    width: 200px;
+    height: 150px;
+    line-height: 150px;
+  }
+
+  .thumbnail--l {
+    width: 400px;
+    height: 200px;
+    line-height: 200px;
+  }
+}
+
+.fileinput-error-block {
+  display: none !important;
+
+  > div {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.fileinput-error {
+  .fileinput-error-block {
+    display: block !important;
+  }
+
+  .fileinput-new.thumbnail {
+    display: none !important;
+  }
+
+  .fileinput-preview.thumbnail {
+    display: none !important;
+  }
+}
+
+.image-validation-errors {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+}
+
+.image-validation-errors--boxed {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  bottom: 32px;
+  overflow: auto;
+  right: 5px;
+  font-size: 13px;
+}
+
+.no-image {
+  background: #efefef;
+  height: 100%;
+  width: 100%;
+
+  > img {
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-block;
+  }
+}

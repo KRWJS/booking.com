@@ -1,0 +1,51 @@
+//
+// Componenent - Custom Upload
+// --------------------------------------------------
+
+
+.js .custom-upload{
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+.custom-upload + label{
+  width: 100%;
+  font-size: 18px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  padding: 16px;
+  margin: 0;
+  & img{
+    margin-right: 18px;
+    margin-bottom: -4px;
+  }
+}
+.no-js .custom-upload + label{
+  display: none;
+}
+.custom-upload:focus + label,
+.custom-upload.has-focus + label{
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+.custom-upload + label{
+  @include transition (box-shadow 0.5s);
+  color: $orange-base;
+  background-color: $white-base;
+}
+.custom-upload:focus + label,
+.custom-upload.has-focus + label,
+.custom-upload + label:hover{
+  @include box-shadow(0px, 0px, 2px, $orange-base, $inset: false);
+  background-color: $white-base;
+}
+.custom-upload + label span{
+  color: $grey-dark;
+  font-size: 16px;
+  font-weight: normal;
+}

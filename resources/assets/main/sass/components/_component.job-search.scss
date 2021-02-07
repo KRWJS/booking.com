@@ -1,0 +1,195 @@
+//
+// Componenent - Job Search
+// --------------------------------------------------
+
+
+.container--search{
+  position: absolute;
+  top: 68%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 1;
+  @media only screen and (max-width : 991px) {
+    width: 100%;
+    top: 55%;
+  }
+  @media only screen and (max-width : 768px) {
+    width: 100%;
+    top: 22%;
+  }
+}
+.form-inline--keyword-search{
+  position: relative;
+}
+input.keyword-search{
+  @include transition (box-shadow 0.5s);
+  @include border-radius(3px);
+  box-shadow: none;
+  border: 0;
+  height: 45px; //Use height not padding for Firefox/IE
+  width: 100% !important;
+  font-size: 16px;
+  color: #708295;
+  text-overflow: ellipsis;
+  padding: 0 20px;
+  @media only screen and (max-width : 767px) {
+    font-size: 15px;
+    height: 42.19px;
+  }
+  &:focus{
+    box-shadow: 0px 0px 0px 2px $blue-light inset;
+  }
+}
+.form-group--keyword-search,
+.form-group--keyword-search--openings{
+  display: block !important;
+  padding-right: 10px;
+  overflow: hidden;
+  margin-bottom: 1px !important;
+}
+.form-group--select{
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+  float: left;
+  & select{
+    @include border-radius(3px);
+    @include appearance(none);
+    padding: 0 1.2em;
+    height: 45.03px;
+    line-height: normal;
+    background: $white-base;
+    width: 100%;
+    font-size: 18px;
+    border: 0;
+    color: #708295;
+    cursor: pointer;
+    @media only screen and (max-width : 767px) {
+      font-size: 15px;
+      height: 42.19px;
+    }
+  }
+  & select::-ms-expand {
+    display: none;
+  }
+  &:before{
+    @include booking-icons;
+    content: "\f0dc";
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    transform: translate(0%, -50%);
+    color: #708295;
+    @media only screen and (max-width : 767px) {
+      right: 5%;
+    }
+  }
+}
+.form-group--keyword-search-select{
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+  padding-right: 10px;
+  float: left;
+  &:nth-child(2),
+  &:last-child{
+    padding-right: 0;
+  }
+  @media only screen and (max-width : 767px) {
+    width: 100%;
+    float: left;
+    margin-bottom: 5px !important;
+    padding-right: 0;
+  }
+  & select{
+    @include border-radius(3px);
+    @include appearance(none);
+    padding: 0 1.2em;
+    height: 45px;
+    background: $white-base;
+    width: 100%;
+    font-size: 16px;
+    border: 0;
+    color: #708295;
+    cursor: pointer;
+    @media only screen and (max-width : 767px) {
+      font-size: 15px;
+      height: 42.19px;
+    }
+  }
+  & select::-ms-expand {
+    display: none;
+  }
+  &:before{
+    @include booking-icons;
+    content: "\f0dc";
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translate(0%, -50%);
+    color: #708295;
+    @media only screen and (max-width : 767px) {
+      right: 5% !important;
+    }
+  }
+}
+.a-r-5{
+  &:before{
+    right: 7.4%;
+  }
+}
+.dropdown-toggle--search{
+  color: $blue-base;
+  font-size: 16px;
+  padding-left: 10px;
+  margin-top: 16px;
+  width: 70px;
+  @media only screen and (max-width : 767px) {
+    font-size: 15px;
+  }
+  &:hover{
+    color: $white-base;
+  }
+  &:focus{
+    color: $white-base;
+  }
+  &:after{
+    @include booking-icons;
+    content: "\f078";
+    font-size: 13px;
+    vertical-align: 5%;
+    margin-left: 5px;
+  }
+  &.active:after{
+    @include booking-icons;
+    content: "\f077";
+  }
+}
+.fs-15{
+  @media only screen and (max-width : 767px) {
+    font-size: 15px;
+    padding: 0.64em;
+  }
+}
+.js-collapse-toggle--xsm{
+  display: block;
+  margin-top: 20px;
+  width: 100%;
+}
+.js-collapse-toggle--xsl{
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+}
+.no_results{
+  width: 100%;
+  p{
+    text-align: center;
+    line-height: 31px;
+    color: #7B90A6;
+    font-weight: normal;
+    font-size: 18px;
+  }
+}

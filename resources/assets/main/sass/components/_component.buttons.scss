@@ -1,0 +1,194 @@
+//
+// Componenent - Buttons
+// --------------------------------------------------
+
+
+.btn:focus,
+.btn.focus,
+.btn:active:focus,
+.btn:active.focus,
+.btn.active:focus,
+.btn.active.focus,
+.btn:active,
+.btn.active{
+  outline: 0;
+  box-shadow: none;
+  color: $grey-dark;
+}
+.btn:focus{
+  color: $grey-dark;
+}
+.btn-booking-default--blue,
+.btn-booking-lg--white{
+  @include transition-duration(background 0.7s);
+  @include border-radius(3px);
+  font-size: 16px;
+}
+.btn-booking-default--blue{
+  background: $blue-light;
+  color: $white-base;
+  padding: 0.64em 3.2em;
+  text-align: center;
+  &:hover{
+    background: $blue-base;
+    color: $white-base;
+  }
+  &:focus{
+    color: $white-base;
+  }
+}
+.btn-booking-lg--white{
+  @include box-shadow(4px, 0, 10px, $grey-base, $inset: false);
+  @include transition-duration(background 0.7s);
+  background: $white-base;
+  border: 1px solid #e3e7e9;
+  text-align: left;
+  color: $grey-dark;
+  padding: 35px 40px;
+  position: relative;
+  width: 100%;
+  white-space: normal;
+  @media only screen and (max-width : 768px) {
+    padding: 35px;
+  }
+  &:after{
+    @include booking-icons();
+    content: "\f054";
+    color: $blue-light;
+    position: absolute;
+    top: 45%;
+    right: 5%;
+    -webkit-transform: translateZ(0);
+        transform: translate(0%, 0%);
+            transform: translateZ(0);
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+    -webkit-transition-property: transform;
+            transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+  }
+  & span{
+    @include transition-duration(0.5s);
+    font-size: 18px;
+    line-height: 23px;
+    color: $grey-darker;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  &:hover span{
+    color: $blue-light;
+  }
+  &:hover{
+    color: $grey-dark;
+  }
+  &:hover:after,
+  &:focus:after,
+  &:active:after {
+    color: $blue-light;
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+}
+.arrow-link{
+  @include arrow-link();
+  &:before{
+    @include arrow-link-before();
+  }
+}
+.arrow-link:hover:before,
+.arrow-link:focus:before,
+.arrow-link:active:before{
+  -webkit-transform: translateX(4px);
+          transform: translateX(4px);
+}
+
+
+.btn-linkedin{
+  @include transition-duration(background 0.7s);
+  @include border-radius(0);
+  background: #0077b5;
+  color: $white-base;
+  font-size: 16px;
+  padding: 0.64em 2.1em 0.64em 4.2em;
+  text-align: center;
+  position: relative;
+  & span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0.64em 1em;
+    background: #006ba3;
+  }
+  &:hover{
+    color: $white-base;
+    background: #006ba3;
+  }
+}
+.ribbon{
+  position: absolute;
+  left: -10px;
+  top: 10px;
+  transform: translate(0,0);
+  padding: 5px 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  &:before {
+    content: " ";
+    border-style: solid;
+    border-width: 5px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -10px;
+  }
+}
+h4.ribbon--red{
+  @extend .ribbon;
+  background: $red-base;
+  &:before{
+    border-color: $red-dark $red-dark transparent transparent;
+  }
+}
+h4.ribbon--orange{
+  @extend .ribbon;
+  background: $orange-dark;
+  &:before{
+    border-color: $orange-darker $orange-darker transparent transparent;
+  }
+}
+h4.ribbon--green{
+  @extend .ribbon;
+  background: $green-base;
+  &:before{
+    border-color: $green-dark $green-dark transparent transparent;
+  }
+}
+.view-cv{
+  margin-top: 0 !important;
+}
+.remove-cv,
+.view-cv{
+  font-size: 16px;
+  color: #607389;
+  background: $white-base;
+  display: block;
+  padding: 16px;
+  position: relative;
+  margin: 15px 0;
+  & .fa{
+    color: #feba02;
+  }
+  & .fa-times{
+    color: #607389;
+  }
+  &:hover{
+    @include box-shadow(0px, 0px, 2px, $orange-base, $inset: false);
+    color: #607389;
+  }
+}

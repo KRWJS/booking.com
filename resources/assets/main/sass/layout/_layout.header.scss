@@ -1,0 +1,33 @@
+//
+// Layout - Header
+// --------------------------------------------------
+
+
+.header-image{
+  height: 563px;
+  border-bottom: 5px solid $orange-base;
+  position: relative;
+  @media only screen and (max-width : 768px) {
+    height: 290px;
+  }
+}
+.header-image--home{
+  @include image-retina('../images/headers/header--index', 'jpg', $background-top:"top", $background-left:"center");
+}
+.header-image--our-story{
+  @include image-retina('../images/headers/header--our-story', 'jpg', $background-top:"top", $background-left:"center");
+}
+.header-image--how-we-hire{
+  @include image-retina('../images/headers/header--how-we-hire', 'jpg', $background-top:"top", $background-left:"center");
+}
+.header-image--description{
+  @include image-retina('../images/headers/header--description', 'jpg', $background-top:"top", $background-left:"center");
+}
+.navbar-header__logo {
+  height: 100%;
+  width: auto;
+}
+.logo--mobile{
+  width: 50%;
+  height: 100%;
+}

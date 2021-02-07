@@ -1,0 +1,165 @@
+//
+// Layout - Utilities
+// --------------------------------------------------
+
+
+.u-eqWrap{
+  display: flex;
+}
+.u-equalHMVWrap{
+  flex-wrap: wrap;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.u-equalHMV{
+  @include box-shadow(4px, 0, 10px, $grey-base, $inset: false);
+  width: 49%;
+  margin-bottom: 20px;
+  background: $white-base;
+  border: 1px solid #e3e7e9;
+  &:nth-child(odd){
+    margin-left: 0;
+    margin-right: 2%;
+  }
+  & .btn-booking-lg--white{
+    border: 0;
+    @include box-shadow(0, 0, 0, transparent, $inset: false);
+  }
+  @media only screen and (max-width : 768px) {
+    width: 100%;
+    &:nth-child(odd){
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+// Margin
+.u-m-0{
+  margin: 0 !important;
+}
+// Margin Bottom
+.u-mb-0{
+  margin-bottom: 0 !important;
+}
+// Margin Top
+.u-mt-0{
+  margin-top: 0 !important;
+}
+.u-mt-15{
+  margin-top: 15px !important;
+}
+.u-mt-50{
+  margin-top: 50px !important;
+}
+.u-mtb-5{
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+// Margin Right
+.u-mr-0{
+  margin-right: 0 !important;
+}
+.u-mr-5{
+  margin-right: 5px !important;
+}
+.u-mr-10{
+  margin-right: 10px !important;
+}
+.u-mr-20{
+  margin-right: 20px !important;
+}
+// Margin Left
+.u-ml-5{
+  margin-left: 5px !important;
+}
+.u-ml-30{
+  margin-left: 30px !important;
+}
+
+// Padding
+.u-p-0{
+  padding: 0 !important;
+}
+.u-p-search-0{
+  padding: 0 !important;
+  @media only screen and (max-width : 991px) {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+.u-pl-0{
+  padding-left: 0 !important;
+}
+.u-pr-0{
+  padding-right: 0 !important;
+}
+.u-r-mtb-5{
+  @media only screen and (max-width : 991px) {
+    margin: 5px 0 !important;
+  }
+}
+.u-pl-7{
+  padding-left: 7.5px !important;
+  @media only screen and (max-width : 991px) {
+    padding-left: 15px !important;
+  }
+}
+.u-pr-7{
+  padding-right: 7.5px !important;
+  @media only screen and (max-width : 991px) {
+    padding-right: 15px !important;
+  }
+}
+.u-display-inline{
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+img.flag{
+  width: 20px;
+  height: 15px;
+}
+.u-vcenter{
+  @include u-vcenter();
+}
+.u-standard-padding,
+.u-light-blue-bg{
+  padding: $default-padding;
+  @media only screen and (max-width : 768px) {
+    padding: 52px 15px;
+  }
+}
+.u-large-margin-top{
+  margin-top: 100px;
+}
+.u-light-blue-bg{
+  background: $grey-base;
+}
+.u-fw{
+  width: 100%;
+}
+.u-float-right{
+  float: right;
+}
+.col-thank-you{
+  & p{
+    margin: 15px 0;
+    color: #708295 !important;
+  }
+}
+.add-margin--tablet{
+  @media only screen and (max-width : 768px) {
+    margin-bottom: 50px;
+  }
+}
+.l-standard-padding{
+  padding: $default-padding;
+  @media only screen and (max-width : 768px) {
+    padding: 52px 15px;
+  }
+}
+.u-t-60{
+  &:before{
+    top: 60%;
+  }
+}

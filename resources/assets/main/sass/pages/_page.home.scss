@@ -1,0 +1,64 @@
+//
+// Page - Home
+// --------------------------------------------------
+
+
+.l-standard-padding--home{
+  padding: 81px 15px;
+  @media only screen and (max-width : 768px) {
+    padding: 52px 15px;
+  }
+}
+.u-light-blue-bg--links{
+  padding: 89px 15px;
+  @media only screen and (max-width : 768px) {
+    padding: 58px 15px;
+  }
+}
+.l-standard-padding--bullets{
+  padding: 76px 15px;
+  @media only screen and (max-width : 768px) {
+    padding: 49px 15px;
+  }
+}
+.bullet-point--ol{
+  @include border-radius (50%);
+  background: $orange-base;
+  padding: 13px 12px;
+  color: $white-base;
+  font-size: 14px;
+  position: relative;
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+.col--bullet-title{
+  & h2{
+    margin-bottom: 50px;
+  }
+}
+.row--bullet-container{
+  margin-bottom: 50px;
+  @media only screen and (max-width : 768px) {
+    margin-bottom: 20px;
+  }
+}
+.col--bullet-text{
+  margin-left: -20px;
+  margin-right: 70px;
+  &:last-child{
+    margin-right: 0;
+  }
+  @media only screen and (max-width : 768px) {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+.row--links{
+  @media only screen and (max-width : 768px) {
+    margin-bottom: 0;
+    line-height: 42px;
+    text-align: center;
+  }
+}

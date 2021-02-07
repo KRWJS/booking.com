@@ -1,0 +1,86 @@
+//
+// Modal
+// --------------------------------------------------
+
+
+.modal-content--wechatqr{
+  @include box-shadow(0, 0, 0, transparent, $inset: false);
+  border-radius: 0;
+  border: 1px solid $blue-light;
+
+  img{
+    max-width: 430px;
+    max-height: 430px;
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+.modal-title--wechatqr{
+  text-align: center;
+  margin: 50px 0 20px;
+  font-size: 25px;
+}
+.modal-header--wechatqr{
+  padding: 0;
+  position: relative;
+  border: 0;
+}
+.bullet-point--wechatqr{
+  float: left;
+  margin-right: 15px;
+}
+.u-display-inline{
+  & p{
+    float: left;
+  }
+  &:nth-child(2){
+    margin-top: 10px;
+    margin-bottom: 35px;
+  }
+}
+input.input--copy{
+  width: 100%;
+  padding-right: 5em !important;
+  text-overflow: ellipsis;
+}
+input.input--copy,
+button.btn--copy{
+  border: 1px solid #b2b2b2;
+  padding: 1em;
+}
+i.fa.fa-files-o{
+  color: $orange-base;
+}
+button.btn--copy{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 53px;
+  background: transparent;
+}
+.btn-booking-default--blue--wechatqr{
+  display: block;
+  width: 70%;
+  margin: 30px auto;
+  padding: 1.3em;
+}
+.close{
+  opacity: 1;
+}
+
+.close--wechatqr{
+  margin-top: 0 !important;
+  font-size: 40px;
+  color: $blue-light;
+  height: 41px;
+  position: absolute;
+  top: 5%;
+  right: 2%;
+
+  &:hover{
+    color: $blue-light;
+    opacity: 0.7;
+  }
+}

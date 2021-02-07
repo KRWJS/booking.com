@@ -1,0 +1,1 @@
+{{ Form::checkbox($field, 1, null, ['data-toggle' => 'toggle', 'data-on' => $on, 'data-off' => $off, 'data-onstyle' => 'success', 'data-offstyle' => 'danger']) }}

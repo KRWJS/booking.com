@@ -1,0 +1,113 @@
+//
+// Base - Icons
+// --------------------------------------------------
+
+@font-face{
+  font-family: 'Booking-Icons';
+  src:  url('../fonts/icons/booking-icons.eot');
+  src:  url('../fonts/icons/booking-icons.eot') format('embedded-opentype'),
+        url('../fonts/icons/booking-icons.ttf') format('truetype'),
+        url('../fonts/icons/booking-icons.woff') format('woff'),
+        url('../fonts/icons/booking-icons.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="booking-"], [class*=" booking-"]{
+  font-family: 'Booking-Icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.booking-email-colour:before{
+  content: "\e900";
+  color: #0896ff;
+}
+.booking-linkedin-colour:before{
+  content: "\e901";
+  color: #0a77b8;
+}
+.booking-wechat-colour:before{
+  content: "\e902";
+  color: #11cd6f;
+}
+.booking-weibo-colour .path1:before{
+  content: "\e903";
+  color: rgb(205, 32, 31);
+}
+.booking-weibo-colour .path2:before{
+  content: "\e904";
+  color: rgb(35, 35, 35);
+  font-size: 35px;
+  position: absolute;
+  left: 15px;
+  top: 0;
+  @media only screen and (max-width : 768px) {
+    font-size: 28px;
+    left: 12px;
+  }
+}
+.booking-weibo-colour .path3:before{
+  content: "\e905";
+  color: rgb(221, 136, 12);
+  font-size: 35px;
+  position: absolute;
+  left: 15px;
+  top: 0;
+  @media only screen and (max-width : 768px) {
+    font-size: 28px;
+    left: 12px;
+  }
+}
+.booking-email-colour:before,
+.booking-linkedin-colour:before,
+.booking-wechat-colour:before,
+.booking-weibo-colour .path1:before{
+  @include border-radius(50%);
+  font-size: 35px;
+  padding: 0.4em;
+  background: $white-base;
+  @media only screen and (max-width : 768px) {
+    font-size: 28px;
+  }
+}
+.booking-close:before{
+  content: "\f00d";
+}
+.booking-chev-left:before{
+  content: "\f053";
+}
+.booking-chev-right:before{
+  content: "\f054";
+}
+.booking-chev-down:before{
+  content: "\f078";
+}
+.booking-chev-up:before{
+  content: "\f077";
+}
+.booking-caret-up:before{
+  content: "\f0d8";
+}
+.booking-chev-sort:before{
+  content: "\f0dc";
+}
+.booking-linkedin:before{
+  content: "\f0e1";
+}
+.booking-weibo:before{
+  content: "\f18a";
+}
+.booking-wechat:before{
+  content: "\f1d7";
+}
+.booking-check:before{
+  content: "\f00c";
+}
+.booking-file:before{
+  content: "\f016";
+}

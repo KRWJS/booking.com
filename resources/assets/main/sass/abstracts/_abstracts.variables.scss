@@ -1,0 +1,52 @@
+//
+// Abstracts - Variables
+// --------------------------------------------------
+
+
+$font-family-base:        "Gibson-Regular", "Helvetica neue", Helvetica, Arial, sans-serif;
+
+$font-size-base:          16px;
+$font-size-btn-vacacy:    20px;
+$font-size-btn-span:      14px;
+
+$font-size-h1:            ceil(($font-size-base * 2.5));    // ~40px
+$font-size-h1-mobile:     ceil(($font-size-base * 1.6));    // ~26px
+
+$font-size-small:         ceil(($font-size-base * 1.1));    // ~18px
+$font-size-medium:        ceil(($font-size-base * 1.37));   // ~22px
+
+$font-size-btn-large:            ceil(($font-size-base * 2.2));      // ~36px
+$font-size-btn-large-mobile:     ceil(($font-size-base * 1.37));     // ~22px
+
+$line-height-base:        26px;
+
+
+$black-base:              #000000;
+$white-base:              #FFFFFF;
+
+$grey-base:               #f2f4f8;
+$grey-dark:               #7B90A6;
+$grey-darker:             #3e4853;
+
+$blue-base:               #003580;
+$blue-light:              #009fe3;
+$blue-dark:               #02214c;
+$blue-span:               #00acf0;
+$blue-social:             #17498e;
+
+$orange-base:             #feba02;
+$orange-dark:             #ff6600;
+$orange-darker:           #b24700;
+
+$red-base:                #e52923;
+$red-dark:                #a01d18;
+
+$green-base:              #4caa39;
+$green-dark:              #247215;
+
+
+$default-padding:         4em 15px;
+
+$default-margin:         25px;
+$large-margin-both:      57px 0;
+$btn-margin-bottom:      30px;

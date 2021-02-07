@@ -1,0 +1,48 @@
+/**
+* CMS styles
+*/
+
+
+// Tools
+//---------------------------------------------------------
+// Base settings, functions, mixins and animations
+@import "tools/tools.mixins";
+
+
+// Vendor
+//---------------------------------------------------------
+// Third party plugins
+@import "vendor/bootstrap/bootstrap";
+@import "vendor/bootstraptoggle/bootstrap-toggle";
+@import "vendor/fontawesome/font-awesome";
+@import "vendor/datatables/datatables";
+@import "vendor/jasnybootstrap/jasny-bootstrap";
+@import "vendor/bootstrapdatetimepicker/bootstrap-datetimepicker";
+@import "vendor/select2/select2";
+@import "vendor/select2/select2-bootstrap";
+
+
+// Layout
+//---------------------------------------------------------
+// Lay-out abstractions and helpers that handle
+// aspects like width, position, spacings etc.
+@import "layout/layout.position";
+@import "layout/layout.spacing";
+@import "layout/layout.states";
+
+
+// Component
+//---------------------------------------------------------
+// Single UI-parts like: typography, button,
+// list, link, image, icons, table and form elements
+@import "components/components.form";
+@import "components/component.typography";
+
+
+// Modules
+//---------------------------------------------------------
+// Complex UI-parts made of multiple components
+// like: navigation, header, hero, accordion, slider,
+// pagination, gallery etc.
+@import "module/module.page";
+@import "module/module.panel";

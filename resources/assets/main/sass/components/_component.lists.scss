@@ -1,0 +1,70 @@
+//
+// Componenent - Lists
+// --------------------------------------------------
+
+
+.ul-default,
+.ol-default{
+  font-size: 21px;
+  color: $grey-dark;
+}
+.ul-default{
+  line-height: 40px;
+  & li{
+    padding-left: 1.2em;
+    position: relative;
+  }
+  & li:before{
+    content: "• ";
+    color: $orange-base;
+    position: absolute;
+    left: 0;
+    @media only screen and (max-width : 768px) {
+      margin-right: 0;
+    }
+  }
+}
+.ol-default{
+  line-height: 30px;
+  counter-reset: item;
+  list-style-type: decimal;
+  list-style: none;
+  width: 100%;
+  display: inline-block;
+  & li{
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 20px;
+  }
+  & li:before{
+    @include border-radius(50%);
+    content: '0' counter(item, decimal);
+    counter-increment: item;
+    background: $orange-base;
+    color: $white-base;
+    font-size: 14px;
+    padding: 5px 12px !important;
+    float: left;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 0;
+  }
+}
+.ol-2-cols {
+  & li {
+    width: 50%;
+    float: left;
+  }
+}
+.ol-default--title{
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  margin: 0 0 15px;
+}
+.ol-default--body{
+  font-size: 16px;
+  line-height: 160%;
+  color: $grey-dark;
+}

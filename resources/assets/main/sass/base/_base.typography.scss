@@ -1,0 +1,68 @@
+//
+// Base - Typography
+// --------------------------------------------------
+
+
+@font-face {
+  font-family: 'Gibson-Regular';
+  src: url('../fonts/gibson-regular.eot') format('eot'),
+       url('../fonts/gibson-regular.woff') format('woff'),
+       url('../fonts/gibson-regular.ttf')  format('truetype'),
+}
+h1,
+h2,
+h3,
+h4,
+p{
+  text-rendering: optimizelegibility;
+  & span{
+    color: $blue-span;
+    font-weight: 700;
+  }
+}
+h1,
+h2{
+  color: $grey-darker;
+  margin-bottom: 23px;
+  font-weight: bold;
+}
+h2,
+h4{
+  margin-bottom: 38px;
+}
+h3,
+p{
+  color: $grey-dark;
+}
+h1{
+  font-size: 36px;
+  @media only screen and (max-width : 768px) {
+    font-size: 26px;
+  }
+}
+h2{
+  font-size: 28px;
+}
+h3{
+  font-size: 24px;
+  font-weight: bold;
+  @media only screen and (max-width : 768px) {
+    font-size: 20px;
+  }
+}
+h4{
+  font-size: 18px;
+}
+p,
+label{
+  font-size: 16px;
+  line-height: 160%;
+}
+.fs-17{
+  font-size: 17px;
+}
+.title-centered--tablet{
+  @media only screen and (max-width : 768px) {
+    text-align: center;
+  }
+}

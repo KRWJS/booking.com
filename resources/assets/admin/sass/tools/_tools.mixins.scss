@@ -1,0 +1,73 @@
+//---------------------------------------------------------
+//  #Mixins
+//---------------------------------------------------------
+
+// Index
+// - Prefix animations
+// - Prefix opacity
+// - Prefix transforms
+// - Prefix unselectable
+// - Group
+
+
+//---------------------------------------------------------
+//  Prefix Opacity
+//---------------------------------------------------------
+@mixin opacity($transparancy) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$transparancy * 100})";
+  -moz-opacity: $transparancy;
+  -khtml-opacity: $transparancy;
+  opacity: $transparancy;
+}
+
+
+//---------------------------------------------------------
+//  Prefix Animations
+//---------------------------------------------------------
+@mixin animation($animations) {
+  -webkit-animation: $animations; /* Chr, Saf */
+  animation: $animations; /* IE >9, Fx >15, Op >12.0 */
+}
+
+
+//---------------------------------------------------------
+//  Prefix Transforms
+//---------------------------------------------------------
+@mixin transform($transforms) {
+  -webkit-transform: $transforms; /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+  -ms-transform: $transforms; /* IE 9 */
+  transform: $transforms; /* IE 10, Fx 16+, Op 12.1+ */
+}
+
+
+//---------------------------------------------------------
+//  Hardware accel
+//---------------------------------------------------------
+@mixin hardware-accel {
+  @include transform( translateZ(0) ); // hardware accelerate -webkit-
+  backface-visibility: hidden; // hardware accelerate -webkit-
+}
+
+//---------------------------------------------------------
+//  Prefix unselectable
+//---------------------------------------------------------
+@mixin select($param) {
+  -webkit-touch-callout: $param;
+  -webkit-user-select: $param;
+  -moz-user-select: $param;
+  -ms-user-select: $param;
+  -o-user-select: $param;
+  -khtml-user-select: $param;
+  user-select: $param;
+}
+
+//---------------------------------------------------------
+//  Group
+//---------------------------------------------------------
+@mixin group {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
